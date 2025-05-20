@@ -1,0 +1,32 @@
+{
+  "name": "bmp180",
+  "author": "Egor MEx",
+  "pins": [
+    "",
+    "",
+    "",
+    "",
+    "VCC",
+    "GND",
+    "SCL",
+    "SDA"
+  ],
+  "controls": [
+    {
+      "id": "temperature",
+      "label": "BMP180 Temperature (C)",
+      "type": "range",
+      "min": 0,
+      "max": 65,
+      "step": 0.1
+    },
+    {
+      "id": "pressure",
+      "label": "BMP180 Pressure (Pa)",
+      "type": "range",
+      "min": 30000,
+      "max": 110000,
+      "step": 2
+    }
+  ]
+}

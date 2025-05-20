@@ -1,0 +1,11 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+MQUnifiedsensor
+DHT22
+WireData
+DHT sensor library
+DHT11
+DHTlib
+LiquidCrystal I2C
+Adafruit BMP085 Library

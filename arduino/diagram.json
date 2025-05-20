@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Egor(модификация с Bluetooth HC-05)",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": 85.8, "attrs": {} },
+    { "type": "chip-mq2", "id": "chip_mq2_1", "top": 221.82, "left": 436.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -128.4, "left": 234.2, "attrs": { "color": "red" } },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": -208.8, "left": 347.4, "attrs": { "volume": "0.1" } },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -287.7, "left": 148.2, "attrs": { "temperature": "15", "humidity": "23" } },
+    { "type": "chip-bmp180", "id": "chip_bmp180_1", "top": 269.82, "left": 16.21, "attrs": {} },
+    { "type": "wokwi-lcd2004", "id": "lcd2", "top": -12.8, "left": 456.8, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": -20.4, "left": -120.6, "attrs": {} },
+    { "type": "wokwi-hc05", "id": "hc05", "top": 250, "left": -150, "attrs": {} }
+  ],
+  "connections": [
+    [ "chip_mq2_1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "chip_mq2_1:AO", "uno:A1", "blue", [ "h-96", "v-48", "h5.7" ] ],
+    [ "led1:A", "uno:8", "#8f4814", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "green", [ "v9.6", "h-47.6" ] ],
+    [ "bz1:1", "led1:C", "green", [ "v19.2", "h-67.2" ] ],
+    [ "bz1:2", "uno:7", "red", [ "v28.8", "h-38.8" ] ],
+    [ "dht1:GND", "uno:GND.1", "yellow", [ "v0" ] ],
+    [ "chip_bmp180_1:VCC", "uno:3.3V", "red", [ "h227.41", "v-37.38" ] ],
+    [ "chip_bmp180_1:GND", "uno:GND.3", "yellow", [ "h0" ] ],
+    [ "chip_bmp180_1:SCL", "uno:A5.2", "blue", [ "h0" ] ],
+    [ "chip_bmp180_1:SDA", "uno:A4.2", "white", [ "h0" ] ],
+    [ "lcd2:SCL", "uno:A5", "blue", [ "h0" ] ],
+    [ "lcd2:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "lcd2:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "lcd2:SDA", "uno:A4", "yellow", [ "h0" ] ],
+    [ "dht1:VCC", "uno:12", "red", [ "v0" ] ],
+    [ "dht1:SDA", "uno:5", "cyan", [ "v0" ] ],
+    [ "chip_mq2_1:DO", "uno:2", "yellow", [ "h0" ] ],
+    [ "chip_mq2_1:VCC", "uno:3.3V", "red", [ "h0" ] ],
+    [ "btn1:1.l", "uno:GND.1", "black", [ "v57.6", "h-48" ] ],
+    [ "btn1:2.l", "uno:3", "green", [ "v48", "h-19.2", "v-86.4", "h172.8" ] ],
+
+    [ "hc05:VCC", "uno:5V", "red", [ "v-200", "h-100", "v241.3", "h100" ] ],
+    [ "hc05:GND", "uno:GND.2", "black", [ "v-210", "h-90", "v200", "h-50", "v-0.1" ] ],
+    [ "hc05:TXD", "uno:10", "blue", [ "v0" ] ],
+    [ "hc05:RXD", "uno:11", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
