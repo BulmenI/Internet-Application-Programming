@@ -40,6 +40,12 @@
     [ "hc05:GND", "uno:GND.2", "black", [ "v-210", "h-90", "v200", "h-50", "v-0.1" ] ],
     [ "hc05:TXD", "uno:10", "blue", [ "v0" ] ],
     [ "hc05:RXD", "uno:11", "green", [ "v0" ] ]
+     [ "chip3:KEY", "uno:3.3V", "green", [ "h0" ] ],
+    [ "chip3:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "chip3:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "chip3:TXD", "uno:10", "green", [ "h0" ] ],
+    [ "chip3:RXD", "uno:11", "green", [ "h0" ] ],
+    [ "chip3:STATE", "uno:9", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
