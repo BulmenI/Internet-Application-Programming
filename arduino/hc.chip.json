@@ -1,0 +1,30 @@
+{
+  "name": "hc-05",
+  "author": "",
+  "pins": [
+    "STATE",
+    "KEY",
+    "",
+    "",
+    "VCC",
+    "GND",
+    "RXD",
+    "TXD"
+  ],
+  "controls": [
+    {
+      "id": "connected",
+      "label": "HC-05 Connected",
+      "type": "checkbox"
+    },
+    {
+      "id": "mode",
+      "label": "HC-05 Mode",
+      "type": "dropdown",
+      "options": [
+        {"value": "data", "label": "Data Mode"},
+        {"value": "at", "label": "AT Command Mode"}
+      ]
+    }
+  ]
+}
